@@ -1,0 +1,16 @@
+query FetchLatestArticles($limit: Int) {
+  latest_articles(limit: $limit) {
+    id
+    title
+    body
+    comments {
+      id
+      comment
+      user {
+        id
+        name
+        email
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+mutation CreateArticle($title: String!, $body: String!) {
+  addArticle(input: { article: { title: $title, body: $body }}) {
+    article {
+      id
+      body
+      title
+    }
+  }
+}
